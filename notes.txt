@@ -1,0 +1,12 @@
+Adam Loo
+apl5197
+920130918
+
+Project 1 CMPEN 361
+web server 
+web client
+
+all code built into this CMPEN_PROJECT_1 folder.
+
+language <python>
+
