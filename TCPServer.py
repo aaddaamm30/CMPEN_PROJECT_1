@@ -1,15 +1,15 @@
-#
 ##################################################
 #
 #   File        : TCPServer.py
 #
 #   Author      : Adam Loo
 #   Created     : 07-10-2017
-#   Last Edited : Sat 07 Oct 2017 08:09:23 PM EDT
+#   Last Edited : Sun 08 Oct 2017 05:04:17 PM EDT
 #
 #   Project     : wheres ms right
 #   Goal        : tony stark shit
-#   Description :j;lkjlkjkkkjmnmlklkk
+#   Description : book implementation of TCP 
+#				  implementation
 #
 ####################################################
 
@@ -20,8 +20,8 @@ serverSocket.bind(('',serverPort))
 serverSocket.listen(1)
 print('The server is reat to recieve.  things are good')
 while True:
-	connectionSocket, addr = serverSocket.accept()
-	sentence = connectionSocket.recv(1024).decode()
-	capitalizedSentence = sentence.upper()
-	connectionSocket.send(capitalizedSentence.encode())
-	connectionSocket.close()
+    connectionSocket, addr = serverSocket.accept()
+    sentence = connectionSocket.recv(1024).decode()
+    capitalizedSentence = sentence.upper()
+    connectionSocket.send(capitalizedSentence.encode())
+    connectionSocket.close()

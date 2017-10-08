@@ -10,3 +10,7 @@ all code built into this CMPEN_PROJECT_1 folder.
 
 language <python>
 
+Worked on UDP and TCP implementation
+
+Will update the file with the index.html doc
+

@@ -4,7 +4,7 @@
 #
 #   Author      : Adam Loo
 #   Created     : 07-10-2017
-#   Last Edited : Sat 07 Oct 2017 08:09:22 PM EDT
+#   Last Edited : Sun 08 Oct 2017 03:11:34 PM EDT
 #
 #   Project     : Honestly I just love man
 #   Goal        : try not to come through this gay
@@ -27,7 +27,7 @@ clientSocket.connect((serverName,serverPort))
 sentence = raw_input('Input lowercase sentence you itch ass nigga: ')
 clientSocket.send(sentence.encode())
 modifiedSentence = clientSocket.recv(1024)
-print('what is good period: ', modifiedSentence.decode())
+print(modifiedSentence.decode())
 clientSocket.close()
 
 
