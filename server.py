@@ -4,7 +4,7 @@
 #
 #   Author      : Adam Loo
 #   Created     : 04-10-2017
-#   Last Edited : Thu 12 Oct 2017 08:44:22 PM EDT
+#   Last Edited : Thu 12 Oct 2017 09:57:24 PM EDT
 #
 #   Project     : CMPEN Web Server and Client
 #   Goal        : Server process
@@ -16,6 +16,8 @@
 ####################################################
 
 import socket
+import sys
+from thread import *
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -23,18 +25,29 @@ print(s)
 
 server = 'adampaulloo.com'
 port = 80
-
 server_ip = socket.gethostbyname(server)
-print(server_ip)
 
-request = "GET / HTTP/1.1\nHost: "+server_ip+"\n\n"
-s.connect((server,port))
-s.send(request.encode())
-result = s.recv(4096)
+try:
+    s.bind((server_ip,port))
+except socket.error as e:
+    print(str(e))
 
-#print(result)
+s.listen(5)
 
-while(len(result) > 0):
-    print(result)
-    result = s.recv(4096)
-    
+def threaded_client(conn):
+    conn.send(str.encode('Welcome, type  your info\n'))
+
+    while True:
+        data = conn.recv(2048)
+        reply = 'Server output: ' + data.decode('utf-8')
+        if not data:
+            break
+        conn.sendall(str.encode(reply))
+    conn.close()
+
+while True:
+
+    conn, addr = s.accept()
+    print('connected to: '+addr[0]+':'+str(addr[1]))
+       
+    start_new_thread(threaded_client,(conn,))
