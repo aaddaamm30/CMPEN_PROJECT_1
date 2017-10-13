@@ -4,7 +4,7 @@
 #
 #   Author      : Adam Loo
 #   Created     : 12-10-2017
-#   Last Edited : Thu 12 Oct 2017 10:37:20 PM EDT
+#   Last Edited : Fri 13 Oct 2017 12:34:52 AM EDT
 #
 #   Project     : CMPEN server client
 #   Goal        : youtube workthrough w/ functions
@@ -18,7 +18,7 @@ import socket
 def Main():
 
     port = 80
-    server = 'cse.psu.edu'
+    server = 'adampaulloo.com'
     #server_id = socket.gethostbyname(server)
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
