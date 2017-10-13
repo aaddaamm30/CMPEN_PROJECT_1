@@ -4,7 +4,7 @@
 #
 #   Author      : Adam Loo
 #   Created     : 08-10-2017
-#   Last Edited : Sun 08 Oct 2017 05:04:15 PM EDT
+#   Last Edited : Thu 12 Oct 2017 05:38:53 PM EDT
 #
 #   Project     : CMPEN web server and client
 #   Goal        : return an index page
@@ -36,6 +36,9 @@ while True:
 
     #establising connection
     connectionSocket, addr = serverSocket.accept()
+   
+    #get HTTP message
+    HTTP_message = connectionSocket.recv(msgleg)
     
     #section from textbook
     sentence = connectionSocket.recv(1024).decode()
