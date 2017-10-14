@@ -19,7 +19,7 @@
 
 #libraries including urlparse
 from socket import *
-from urlparse import urlparse
+import urllib.parse
 
 #main function   
 def Main():
@@ -29,7 +29,7 @@ def Main():
 	user_input = input('[CLIENT] URL: ')
 
 	#use urlparse function
-	urlInfo = urlparse(user_input)
+	urlInfo = urllib.parse(user_input)
 	print(type(urlInfo))
 	
 	print(str(urlInfo))
