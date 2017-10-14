@@ -9,7 +9,7 @@
 #   Project     : CMPEN Web server and client
 #   Goal        : Client requests HTML doc
 #   Description : Requests and displays HTML doc
-#		  from server.py
+#				  from server.py
 #
 ####################################################
 
@@ -17,10 +17,25 @@
 #and uses HTTP protocol to process a request to
 #specified URL
 
-import * from socket
+#libraries including urlparse
+from socket import *
+from urlparse import urlparse
 
-def make_http(procol, url, port, fh):
-    user_input = input('URL: ')
-    procol, rest = user_input.split('://')
-    
-    
+#main function   
+def Main():
+	
+	#print startup status
+	print('[CLIENT] initializing ...')
+	user_input = input('[CLIENT] URL: ')
+
+	#use urlparse function
+	urlInfo = urlparse(user_input)
+	print(type(urlInfo))
+	
+	print(str(urlInfo))
+
+	
+
+#if driver of client 
+if __name__ == "__main__":
+	Main()    

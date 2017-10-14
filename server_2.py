@@ -96,6 +96,7 @@ def Main():
             #get http_message
             print("[SERVER] reading into http_message")
             http_message = conn.recv(2096)
+            print(str(http_message))
             
             #use http parsing function to get appropreat response
             #handled by getHTMLRsp
