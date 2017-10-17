@@ -4,7 +4,7 @@
 #
 #   Author      : Adam Loo
 #   Created     : 04-10-2017
-#   Last Edited : Thu 12 Oct 2017 05:43:01 PM EDT
+#   Last Edited : Tue 17 Oct 2017 03:59:36 PM EDT
 #
 #   Project     : CMPEN Web server and client
 #   Goal        : Client requests HTML doc
@@ -19,7 +19,7 @@
 
 #libraries including urlparse
 from socket import *
-import urllib.parse
+from urllib.parse import urlparse
 
 #main function   
 def Main():
@@ -29,7 +29,7 @@ def Main():
 	user_input = input('[CLIENT] URL: ')
 
 	#use urlparse function
-	urlInfo = urllib.parse(user_input)
+	urlInfo = urlparse(user_input)
 	print(type(urlInfo))
 	
 	print(str(urlInfo))
