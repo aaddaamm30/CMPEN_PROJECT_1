@@ -4,16 +4,16 @@
 #
 #   Author      : Adam Loo
 #   Created     : 07-10-2017
-#   Last Edited : Sun 08 Oct 2017 03:11:34 PM EDT
+#   Last Edited : Tue 17 Oct 2017 09:34:56 PM EDT
 #
 #   Project     : Honestly I just love man
 #   Goal        : try not to come through this gay
 #   Description : holy shit if anyone reads this. 
-#				  SERIOUSLy for the fact that this
-#				  is all on github wtf. not hyet tho
-#				  I give myself a 3/5 for getting
-#				  to the bouldering wall. idk im
-#				  pretty drunk. ok tcplcient niga
+#		  SERIOUSLy for the fact that this
+#		  is all on github wtf. not hyet tho
+#		  I give myself a 3/5 for getting
+#		  to the bouldering wall. idk im
+#		  pretty drunk. ok tcplcient niga
 #
 ####################################################
 
