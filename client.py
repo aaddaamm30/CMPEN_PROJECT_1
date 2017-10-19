@@ -4,7 +4,7 @@
 #
 #   Author      : Adam Loo
 #   Created     : 04-10-2017
-#   Last Edited : Tue 17 Oct 2017 10:26:02 PM EDT
+#   Last Edited : Thu 19 Oct 2017 01:20:56 AM EDT
 #
 #   Project     : CMPEN Web server and client
 #   Goal        : Client requests HTML doc
@@ -46,7 +46,7 @@ def Main():
         clientSocket.connect((urlInfo.hostname, 80))
 
     #formatting http request
-    message = 'GET '+urlInfo.path+' HTTP/1.1\n\n'
+    message = 'GET '+urlInfo.path+' HTTP/1.1\nHost: '+urlInfo.hostname+'\n\n'
 
     print('[CLIENT] HTTP MESSAGE:\n'+message)
     
